@@ -1,0 +1,66 @@
+- [X] AIACS
+- [X] AICONVERSE
+- [X] AICRTSZ
+- [X] AIGPTHVAR
+- [X] AIHearStat
+- [ ] AIPATH
+- [X] AIPATHVAR
+- [X] AISNDTWK
+- [X] AI_ROOM_DB
+- [ ] AMAPANNO
+- [X] AMBIENT
+- [X] BASH
+- [X] BRHEAD
+- [X] BRLIST
+- [X] BRVER
+- [X] CELL_MOTION
+- [X] CELOBJVAR1
+- [X] CELOBJVAR2
+- [X] CELOBJVAR3
+- [X] CLOUDOBJVAR
+- [ ] CRET_SYSTEM
+- [X] DARKCOMBAT
+- [X] DARKMISS
+- [X] DISTOBJVAR
+- [X] DRKSET
+- [X] ENVMAPVAR
+- [ ] ENV_SOUND
+- [X] FAMILY
+- [X] FILE_TYPE
+- [X] FLOW_TEX
+- [X] FOGZONEVAR
+- [X] GameSysEAX
+- [ ] GHOSTREM
+- [X] HotRegions
+- [ ] LM_PARAM
+- [X] MAPISRC
+- [X] MissionEAX
+- [X] MultiBrush
+- [ ] ObjVec
+- [ ] OBJ_MAP
+- [ ] PHYS_SYSTEM
+- [ ] PLAYER
+- [ ] PLAYERCAM
+- [ ] QUEST_DB
+- [ ] Relations
+- [X] RENDPARAMS
+- [X] ROOM_DB
+- [X] ROOM_EAX
+- [ ] SchSamp
+- [ ] SCRIPTSTATE
+- [X] ScrModules
+- [ ] SIM_MAN
+- [ ] SIM_TIME
+- [X] SKYMODE
+- [X] SKYOBJVAR
+- [ ] SndScript
+- [X] SONGPARAMS
+- [ ] Speech_DB
+- [X] STAROBJVAR
+- [X] TILIST
+- [X] TXLIST
+- [X] TXTPAT_DB
+- [X] WATERBANKS
+- [ ] WEATHER
+- [X] WEATHERVAR
+- [X] WREXT
