@@ -87,8 +87,8 @@ struct WrCellHeader {
     u8 render_poly_count;
     u8 portal_poly_count;
     u8 plane_count;
-    u8 medium;
-    u8 flags;
+    u8 medium; // TODO: Enum
+    u8 flags; // TODO: Bitfield
     s32 portal_vertex_list;
     u16 num_v_list;
     u8 anim_light_count;
@@ -98,7 +98,7 @@ struct WrCellHeader {
 };
 
 struct WrPoly {
-    u8 flags;
+    u8 flags; // TODO: Bitfield
     u8 vertex_count;
     u8 plane_id;
     u8 clut_id;
