@@ -64,7 +64,9 @@ struct Polygon {
     if (type == 0x1B) {
         u16 uv_indices[vertex_count];
     }
-    u8 material; // Only in version 4
+    if (parent.version == 4) {
+        u8 material;
+    }
 };
 
 struct Model {
