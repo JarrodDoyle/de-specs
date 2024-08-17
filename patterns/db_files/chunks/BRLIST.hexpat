@@ -1,6 +1,6 @@
 #pragma once
 
-#include "lgtypes.hexpat"
+#include "Common.hexpat"
 
 using Br;
 using Grid;

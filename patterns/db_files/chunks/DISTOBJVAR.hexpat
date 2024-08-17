@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Common.hexpat"
+
 struct DistantArtVar {
     bool enable_distant_art;
     padding[3];

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Common.hexpat"
+
 struct CelObjVar {
     bool enable_object;
     padding[3];

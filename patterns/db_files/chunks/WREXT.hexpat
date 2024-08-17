@@ -4,7 +4,7 @@
 #include <std/math.pat>
 #include <std/core.pat>
 #include <std/io.pat>
-#include "FileBase.hexpat"
+#include "Common.hexpat"
 
 using WrHeader;
 using WrCell;

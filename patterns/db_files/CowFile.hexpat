@@ -1,9 +1,10 @@
+#pragma once
+
 #include <std/string.pat>
 #include <std/io.pat>
 
-#include "FileBase.hexpat"
-#include "lgtypes.hexpat"
-
+#include "db_files/FileBase.pat"
+#include "db_files/Common.hexpat"
 #include "db_files/AllChunks.pat"
 
 FileHeader file_header @ 0x0;
@@ -40,10 +41,10 @@ Chunk<FileType> file_type @ get_offset(toc, "FILE_TYPE");
 Chunk<FlowTex> flow_tex @ get_offset(toc, "FLOW_TEX");
 Chunk<FogZoneVar> fog_zone_var @ get_offset(toc, "FOGZONEVAR");
 Chunk<AccousticsProperty> gamesys_eax @ get_offset(toc, "GameSysEAX");
-Chunk<NameNum> hot_regions @ get_offset(toc, "HotRegions");
+Chunk<NameNum::Table> hot_regions @ get_offset(toc, "HotRegions");
 Chunk<MapISrc> map_i_src @ get_offset(toc, "MAPISRC");
 Chunk<AccousticsProperty> mission_eax @ get_offset(toc, "MissionEAX");
-Chunk<NameNum> multibrush @ get_offset(toc, "MultiBrush");
+Chunk<NameNum::Table> multibrush @ get_offset(toc, "MultiBrush");
 Chunk<RendParams> rend_params @ get_offset(toc, "RENDPARAMS");
 Chunk<RoomDb> room_db @ get_offset(toc, "ROOM_DB");
 Chunk<RoomEax> room_eax @ get_offset(toc, "ROOM_EAX");

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Common.hexpat"
+
 struct RGBA {
     Vec3<u8> rgb;
     padding[1];

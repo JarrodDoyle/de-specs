@@ -1,6 +1,6 @@
 #pragma once
 
-#include "lgtypes.hexpat"
+#include "Common.hexpat"
 
 struct CellMotionPortal {
     Vec3<float> center;

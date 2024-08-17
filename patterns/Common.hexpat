@@ -17,3 +17,17 @@ struct Vec4<T> {
     T z;
     T w;
 };
+
+struct Plane {
+    float x;
+    float y;
+    float z;
+    float d;
+};
+
+struct DPlane {
+    double x;
+    double y;
+    double z;
+    double d;
+};

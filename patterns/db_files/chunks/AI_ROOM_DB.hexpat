@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Common.hexpat"
-#include "lgtypes.hexpat"
 
 namespace AiRoomDb {
     struct Cell {

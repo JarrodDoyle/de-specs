@@ -1,53 +1,5 @@
 #pragma once
 
-struct Version {
-    u32 major;
-    u32 minor;
-};
-
-struct FileHeader {
-    u32 toc_offset;
-    Version version;
-    padding[256];
-    u32 deadbeef;
-};
-
-struct TOCEntry {
-    char name[12];
-    u32 offset;
-    u32 size;
-};
-
-struct TableOfContents {
-    u32 item_count;
-    TOCEntry items[item_count];
-};
-
-struct ChunkHeader {
-    char name[12];
-    Version version;
-    padding[4];
-};
-
-struct Chunk<T> {
-    ChunkHeader header;
-    T data;
-};
-
-struct Plane {
-    float x;
-    float y;
-    float z;
-    float d;
-};
-
-struct DPlane {
-    double x;
-    double y;
-    double z;
-    double d;
-};
-
 namespace NameNum {
     struct Tag {
         s32 value;

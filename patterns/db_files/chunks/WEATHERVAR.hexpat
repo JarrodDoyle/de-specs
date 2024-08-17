@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Common.hexpat"
+
 enum Precipitation : u32 {
     Snow = 0x0,
     Rain = 0x1,

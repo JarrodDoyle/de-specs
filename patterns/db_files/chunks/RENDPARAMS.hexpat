@@ -1,6 +1,6 @@
 #pragma once
 
-#include "lgtypes.hexpat"
+#include "Common.hexpat"
 
 enum SunlightMode : s32 {
     SingleUnshadowed = 0x0,

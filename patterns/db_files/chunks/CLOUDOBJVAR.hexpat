@@ -1,6 +1,7 @@
 #pragma once
 
-#include "lgtypes.hexpat"
+#include "Common.hexpat"
+#include "db_files/Common.hexpat"
 
 using ColorSettings;
 

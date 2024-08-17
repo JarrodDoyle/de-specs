@@ -1,6 +1,7 @@
 #pragma once
 
-#include "lgtypes.hexpat"
+#include "Common.hexpat"
+#include "db_files/Common.hexpat"
 
 struct SkyObjVar {
     bool enable_new_sky;
