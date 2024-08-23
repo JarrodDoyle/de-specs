@@ -86,7 +86,7 @@ struct TOCEntry {
         ("WREXT"): Chunk<WrExt> world_rep @ offset;
         (_): {
             if (std::string::starts_with(name, "P$")) {
-                Chunk<PropertyMap> property_chunk @ offset;
+                Chunk<PropertyMap> property_chunk @ offset [[name(name)]];
             }
         }
     }
