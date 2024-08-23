@@ -36,7 +36,7 @@
 - [X] MAPISRC
 - [X] MissionEAX
 - [X] MultiBrush
-- [ ] ObjVec
+- [X] ObjVec
 - [X] OBJ_MAP
 - [ ] PHYS_SYSTEM
 - [ ] PLAYER

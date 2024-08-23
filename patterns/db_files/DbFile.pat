@@ -70,6 +70,7 @@ struct TOCEntry {
         ("MissionEAX"): Chunk<AccousticsProperty> mission_eax @ offset;
         ("MultiBrush"): Chunk<MultiBrush> multibrush @ offset;
         ("OBJ_MAP"): Chunk<ObjMap> obj_map @ offset;
+        ("ObjVec"): Chunk<ObjVec> obj_vec @ offset;
         ("Relations"): Chunk<Relations> relations @ offset;
         ("RENDPARAMS"): Chunk<RendParams> rend_params @ offset;
         ("ROOM_DB"): Chunk<RoomDb> room_db @ offset;
@@ -92,9 +93,12 @@ struct TOCEntry {
             // if (std::string::starts_with(name, "LD$")) {
             //     std::print("LD: {}", name);
             // }
-            if (std::string::starts_with(name, "L$")) {
+            else if (std::string::starts_with(name, "L$")) {
                 Chunk<LinkMap> link_chunk @ offset [[name(name)]];
                 // std::print("L: {}", name);
+            }
+            else {
+                std::print("Didn't load chunk: {}", name);
             }
         }
     }
