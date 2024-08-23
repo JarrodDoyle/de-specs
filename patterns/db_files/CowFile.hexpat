@@ -10,6 +10,7 @@ FileHeader file_header @ 0x0;
 TableOfContents toc @ file_header.toc_offset;
 
 TOCEntry brlist_toc = get_toc_entry(toc, "BRLIST");
+TOCEntry objmap_toc = get_toc_entry(toc, "OBJ_MAP");
 TOCEntry scrmodules_toc = get_toc_entry(toc, "ScrModules");
 
 Chunk<AiRoomDb::ChunkData> ai_room_db @ get_offset(toc, "AI_ROOM_DB");
@@ -44,6 +45,7 @@ Chunk<HotRegions> hot_regions @ get_offset(toc, "HotRegions");
 Chunk<MapISrc> map_i_src @ get_offset(toc, "MAPISRC");
 Chunk<AccousticsProperty> mission_eax @ get_offset(toc, "MissionEAX");
 Chunk<MultiBrush> multibrush @ get_offset(toc, "MultiBrush");
+Chunk<ObjMap> obj_map @ get_offset(toc, "OBJ_MAP");
 Chunk<RendParams> rend_params @ get_offset(toc, "RENDPARAMS");
 Chunk<RoomDb> room_db @ get_offset(toc, "ROOM_DB");
 Chunk<RoomEax> room_eax @ get_offset(toc, "ROOM_EAX");
