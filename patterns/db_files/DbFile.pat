@@ -70,6 +70,7 @@ struct TOCEntry {
         ("MissionEAX"): Chunk<AccousticsProperty> mission_eax @ offset;
         ("MultiBrush"): Chunk<MultiBrush> multibrush @ offset;
         ("OBJ_MAP"): Chunk<ObjMap> obj_map @ offset;
+        ("Relations"): Chunk<Relations> relations @ offset;
         ("RENDPARAMS"): Chunk<RendParams> rend_params @ offset;
         ("ROOM_DB"): Chunk<RoomDb> room_db @ offset;
         ("ROOM_EAX"): Chunk<RoomEax> room_eax @ offset;
