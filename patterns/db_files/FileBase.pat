@@ -46,3 +46,13 @@ fn get_offset(TableOfContents toc, str entry_name) {
     TOCEntry entry = get_toc_entry(toc, entry_name);
     return entry.offset;
 };
+
+fn get_size(TableOfContents toc, str entry_name) {
+    TOCEntry entry = get_toc_entry(toc, entry_name);
+    return entry.size;
+};
+
+fn get_end(TableOfContents toc, str entry_name) {
+    TOCEntry entry = get_toc_entry(toc, entry_name);
+    return entry.offset + entry.size + 24;
+};
