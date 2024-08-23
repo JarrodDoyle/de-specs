@@ -37,12 +37,12 @@
 - [X] MissionEAX
 - [X] MultiBrush
 - [ ] ObjVec
-- [ ] OBJ_MAP
+- [X] OBJ_MAP
 - [ ] PHYS_SYSTEM
 - [ ] PLAYER
 - [ ] PLAYERCAM
 - [ ] QUEST_DB
-- [ ] Relations
+- [X] Relations
 - [X] RENDPARAMS
 - [X] ROOM_DB
 - [X] ROOM_EAX
