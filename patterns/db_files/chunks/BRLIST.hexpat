@@ -12,23 +12,42 @@ struct BrList {
     Br brushes[while($ < brlist_toc.offset + brlist_toc.size)];
 };
 
-// Potentially rename fields depending on the media type?
+// There's one core struct here, but fields are used differently for non-terrain brushes
+// Lights:
+// - primal_id -> Object Handle (ID + 1?)
+// - size -> (Brightness, Hue, Saturation)
+// - num_faces -> Type (omni/spotlight) (Spotlight doesn't actually seem to be used by the engine)
+//
+// Areas:
+// - texture_id -> Bitfield (Active = 1, MeOnly = 2) (these can both be true)
+//
+// Objects:
+// - primal_id -> Object ID
+// - num_faces -> This is always 255/-1, not sure what it means
+//
+// Flow:
+// - texture_id -> Flow Group ID
+//
+// Rooms:
+// - primal_id -> Concrete room ID (shared between all rooms using the same archetype)
+// - texture_id -> Secondary room ID (unique to every room brush)
 struct Br {
-    s16 br_id;
+    s16 brush_id;
     s16 timestamp;
     BrType primal_id;
-    s16 tx_id;
+    s16 texture_id;
     BrMedia media;
     s8 flags; // potential bitfield
-    Vec3<float> pos; // Brush center
-    Vec3<float> sz; // Brush extents (dimensions)
-    Vec3<u16> ang;
-    s16 cur_face;
-    Grid grid;
+    Vec3<float> position; // Brush center
+    Vec3<float> size; // Brush extents (dimensions)
+    Vec3<u16> angle;
+    s16 current_face_index;
+    Grid grid_settings;
     u8 num_faces;
+    // The next 4 values are selection/multibrush related
     s8 edge;
     s8 point;
-    s8 use_flg;
+    s8 use_flag;
     s8 group_id;
     padding[4];
     // We have to do a double cast here because otherwise the s8 for non-terrain brushes is just wrong??
