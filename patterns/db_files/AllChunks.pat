@@ -26,6 +26,7 @@
 #include "db_files/chunks/FLOW_TEX.hexpat"
 #include "db_files/chunks/FOGZONEVAR.hexpat"
 #include "db_files/chunks/HotRegions.hexpat"
+#include "db_files/chunks/L$_.hexpat"
 #include "db_files/chunks/MAPISRC.hexpat"
 #include "db_files/chunks/Mission_GameSysEAX.hexpat"
 #include "db_files/chunks/MultiBrush.hexpat"

@@ -88,6 +88,13 @@ struct TOCEntry {
             if (std::string::starts_with(name, "P$")) {
                 Chunk<PropertyMap> property_chunk @ offset [[name(name)]];
             }
+            // if (std::string::starts_with(name, "LD$")) {
+            //     std::print("LD: {}", name);
+            // }
+            if (std::string::starts_with(name, "L$")) {
+                Chunk<LinkMap> link_chunk @ offset [[name(name)]];
+                // std::print("L: {}", name);
+            }
         }
     }
 };
