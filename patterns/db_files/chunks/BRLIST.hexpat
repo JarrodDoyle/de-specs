@@ -9,7 +9,7 @@ using BrMedia;
 using BrType;
 
 struct BrList {
-    u32 max = get_end(toc, parent.header.name);
+    u32 max = parent.parent.data_end;
     Br brushes[while($ < max)];
 };
 
