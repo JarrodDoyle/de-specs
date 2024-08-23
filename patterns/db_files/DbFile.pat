@@ -1,5 +1,5 @@
 #pragma once
-#pragma pattern_limit 262144
+#pragma pattern_limit 523288
 
 #include <std/string.pat>
 #include <std/io.pat>
@@ -90,9 +90,10 @@ struct TOCEntry {
             if (std::string::starts_with(name, "P$")) {
                 Chunk<PropertyMap> property_chunk @ offset [[name(name)]];
             }
-            // if (std::string::starts_with(name, "LD$")) {
-            //     std::print("LD: {}", name);
-            // }
+            else if (std::string::starts_with(name, "LD$")) {
+                Chunk<LinkDataChunk> link_data @ offset [[name(name)]];
+                // std::print("LD: {}", name);
+            }
             else if (std::string::starts_with(name, "L$")) {
                 Chunk<LinkMap> link_chunk @ offset [[name(name)]];
                 // std::print("L: {}", name);
