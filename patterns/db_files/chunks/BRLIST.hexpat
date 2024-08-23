@@ -9,7 +9,8 @@ using BrMedia;
 using BrType;
 
 struct BrList {
-    Br brushes[while($ < brlist_toc.offset + brlist_toc.size)];
+    u32 max = get_end(toc, parent.header.name);
+    Br brushes[while($ < max)];
 };
 
 // There's one core struct here, but fields are used differently for non-terrain brushes

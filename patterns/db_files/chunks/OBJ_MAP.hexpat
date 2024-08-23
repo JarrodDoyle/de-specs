@@ -9,5 +9,6 @@ struct ObjMapElement {
 };
 
 struct ObjMap {
-    ObjMapElement objects[while($ < objmap_toc.offset + objmap_toc.size)];
+    u32 max = get_end(toc, parent.header.name);
+    ObjMapElement objects[while($ < max)];
 };

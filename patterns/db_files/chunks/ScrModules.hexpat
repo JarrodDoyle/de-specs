@@ -9,6 +9,7 @@ namespace ScrModules {
     };
 
     struct ChunkData {
-        Name names[while($ < scrmodules_toc.offset + scrmodules_toc.size)];
+        u32 max = get_end(toc, parent.header.name);
+        Name names[while($ < max)];
     };
 }
