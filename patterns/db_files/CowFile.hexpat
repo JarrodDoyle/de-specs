@@ -60,3 +60,6 @@ Chunk<TexturePatchDatabase> texture_patch_database @ get_offset(toc, "TXTPAT_DB"
 Chunk<WaterBanks> water_banks @ get_offset(toc, "WATERBANKS");
 Chunk<WeatherVar> weather_var @ get_offset(toc, "WEATHERVAR");
 Chunk<WrExt> world_rep @ get_offset(toc, "WREXT");
+
+// TODO: Have a nice function for doing all of these?
+Chunk<PropertyMap> p_model_name @ get_offset(toc, "P$ModelName");

@@ -30,6 +30,7 @@
 #include "db_files/chunks/Mission_GameSysEAX.hexpat"
 #include "db_files/chunks/MultiBrush.hexpat"
 #include "db_files/chunks/OBJ_MAP.hexpat"
+#include "db_files/chunks/P$_.hexpat"
 #include "db_files/chunks/RENDPARAMS.hexpat"
 #include "db_files/chunks/ROOM_DB.hexpat"
 #include "db_files/chunks/ROOM_EAX.hexpat"
