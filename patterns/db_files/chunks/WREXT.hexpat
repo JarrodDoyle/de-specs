@@ -19,6 +19,7 @@ using WrLightMapDataPixel;
 using WrBspTree;
 using WrBspTreeNode;
 using WrBspTreeCellPlane;
+using WrCellWeather;
 using WrLightTable;
 using WrLightTableData;
 using WrLightTableAnimLight;
@@ -32,7 +33,7 @@ struct WrExt {
     WrHeader header;
     WrCell cells[header.cell_count];
     WrBspTree bsp_tree;
-    padding[header.cell_count]; // This is suspicious. Fog? SEE VFIGS MISSDEEDS!!
+    WrCellWeather weather[header.cell_count];
     WrLightTable lights;
     WrCsgCellTable csg_cell_table;
 };
@@ -147,7 +148,9 @@ struct WrLightMap {
 
     u32 count = 1 + std::bit::popcount(parent.p_light_list[i].anim_light_bitmask);
     u32 bytes_per_pixel = parent.parent.header.bytes_per_pixel;
-    WrLightMapLayer layers[count];
+    // WrLightMapLayer layers[count];
+    // u8 pixels[count * width * height * bytes_per_pixel];
+    padding[count * width * height * bytes_per_pixel];
 };
 
 struct WrLightMapLayer {
@@ -176,6 +179,11 @@ struct WrBspTreeNode {
 struct WrBspTreeCellPlane {
     s32 cell_id;
     s32 plane_id;
+};
+
+bitfield WrCellWeather {
+    fog_zone : 4; // No fog and fog zone 0 share a value. Cells have flags & 64 if they're foggy
+    ambient_zone : 4;
 };
 
 struct WrLightTable {
