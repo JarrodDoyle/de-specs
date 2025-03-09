@@ -148,9 +148,7 @@ struct WrLightMap {
 
     u32 count = 1 + std::bit::popcount(parent.p_light_list[i].anim_light_bitmask);
     u32 bytes_per_pixel = parent.parent.header.bytes_per_pixel;
-    // WrLightMapLayer layers[count];
-    // u8 pixels[count * width * height * bytes_per_pixel];
-    padding[count * width * height * bytes_per_pixel];
+    WrLightMapLayer layers[count];
 };
 
 struct WrLightMapLayer {
