@@ -28,6 +28,7 @@
 #include "db_files/chunks/HotRegions.hexpat"
 #include "db_files/chunks/L$_.hexpat"
 #include "db_files/chunks/LD$_.hexpat"
+#include "db_files/chunks/LM_PARAM.hexpat"
 #include "db_files/chunks/MAPISRC.hexpat"
 #include "db_files/chunks/Mission_GameSysEAX.hexpat"
 #include "db_files/chunks/MultiBrush.hexpat"

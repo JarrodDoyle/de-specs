@@ -66,6 +66,7 @@ struct TOCEntry {
         ("FOGZONEVAR"): Chunk<FogZoneVar> fog_zone_var @ offset;
         ("GameSysEAX"): Chunk<AccousticsProperty> gamesys_eax @ offset;
         ("HotRegions"): Chunk<HotRegions> hot_regions @ offset;
+        ("LM_PARAM"): Chunk<LmParams> lm_params @ offset;
         ("MAPISRC"): Chunk<MapISrc> map_i_src @ offset;
         ("MissionEAX"): Chunk<AccousticsProperty> mission_eax @ offset;
         ("MultiBrush"): Chunk<MultiBrush> multibrush @ offset;
@@ -92,11 +93,9 @@ struct TOCEntry {
             }
             else if (std::string::starts_with(name, "LD$")) {
                 Chunk<LinkDataChunk> link_data @ offset [[name(name)]];
-                // std::print("LD: {}", name);
             }
             else if (std::string::starts_with(name, "L$")) {
                 Chunk<LinkMap> link_chunk @ offset [[name(name)]];
-                // std::print("L: {}", name);
             }
             else {
                 std::print("Didn't load chunk: {}", name);
