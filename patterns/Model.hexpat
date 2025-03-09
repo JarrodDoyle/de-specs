@@ -4,9 +4,15 @@
 
 // TODO: All these types should be enums lol
 
+enum ObjectType : u8 {
+    Static,
+    Rotating,
+    Sliding,
+};
+
 struct Object {
     char name[8];
-    u8 type;
+    ObjectType type;
     s32 parameter;
     float min_range;
     float max_range;
@@ -41,8 +47,19 @@ struct AuxMaterialInfo {
     }
 };
 
+enum VHotId : u32 {
+    LightPosition = 1,
+    LightDirection = 8,
+    Anchor = 2,
+    Particle1 = 3,
+    Particle2 = 4,
+    Particle3 = 5,
+    Particle4 = 6,
+    Particle5 = 7,
+};
+
 struct VHot {
-    u32 id;
+    VHotId id;
     Vec3<float> location;
 };
 
